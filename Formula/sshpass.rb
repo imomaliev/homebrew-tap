@@ -1,5 +1,5 @@
 # based on https://github.com/rdp/homebrew-sshpass/blob/patch-1/sshpass.rb
-class SSHPass < Formula
+class Sshpass < Formula
   desc "Non-interactive ssh password auth"
   homepage "https://sourceforge.net/projects/sshpass/"
   url "https://downloads.sourceforge.net/project/sshpass/sshpass/1.09/sshpass-1.09.tar.gz"

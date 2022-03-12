@@ -25,10 +25,17 @@ repos:
           - id: terraform_validate
     - repo: local
       hooks:
-          - id: homebrew-style
+          - id: homebrew-style-formula
             name: Check formulae or files for conformance to Homebrew style guidelines.
             entry: brew style
-            args: [--fix]
+            args: [--formula, --fix]
+            types: [ruby]
+            language: system
+            files: ^Formula/.*$
+          - id: homebrew-audit-formula
+            name: Check formula for Homebrew coding style violations
+            entry: brew audit
+            args: [--skip-style, --formula, --strict]
             types: [ruby]
             language: system
             files: ^Formula/.*$
