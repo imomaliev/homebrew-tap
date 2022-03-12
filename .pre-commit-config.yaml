@@ -23,3 +23,12 @@ repos:
       hooks:
           - id: terraform_fmt
           - id: terraform_validate
+    - repo: local
+      hooks:
+          - id: homebrew-style
+            name: Check formulae or files for conformance to Homebrew style guidelines.
+            entry: brew style
+            args: [--fix]
+            types: [ruby]
+            language: system
+            files: ^Formula/.*$
